@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.row {
+  display: flex;
+}
+
+@media only screen and (max-width: 800px) {
+  .row{
+    flex-direction: column;
+  }
+}
+
+.char-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: rgb(57, 174, 212);
+  height: 350px;
+}
+
+.char-header h1 {
+  color: white;
+  margin: 0;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+.gallery-controls button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  background-color: white;
+  border:rgb(255, 96, 33) 1px solid;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.5s;
+}
+
+.gallery-controls button:hover {
+  background-color: rgb(255, 96, 33);
+  color: white;
+}
+
+.char-filters {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.search-characters {
+  margin: 0 10px;
+}
+
+.char-accordion {
+  width: 20%;
+  color: white;
+  background-color: rgb(96, 97, 97);
+}
+
+@media only screen and (max-width: 800px) {
+  .char-accordion {
+    width: 100%;
+  }
+}
+
+.accordion-tab {
+  padding: 20px 0 20px 10px;
+  border-bottom:rgb(39, 38, 38) 0.5px solid;
+  border-top:rgb(39, 38, 38) 0.5px solid;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.accordion-summary {
+  max-height: 0;
+  font-size: 14px;
+  font-style: italic;
+  overflow: hidden;
+}
+
+.accordion-summary > div {
+  padding: 10px;
+}
+
+.accordion-summary.active {
+  max-height: 600px;
+  transition: max-height 1s;
+}
+
+.char-main {
+  width: 80%;
+}
+
+@media only screen and (max-width: 800px) {
+  .char-main {
+    width: 100%;
+  }
+  .accordion-summary.active {
+    max-height: 200px;
+  }
+}
+
+.char-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.charCard {
+  width: 305px;
+  display: flex;
+  background-color: rgb(35, 38, 39);
+  color: white;
+  border-radius: 25px;
+  overflow: hidden;
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+
+.charCard:hover {
+  transform: scale(1.015)
+}
+
+.charImage {
+  height: 150px;
+}
+
+.charName { 
+  align-self: center;
+  padding: 20px;
+}
